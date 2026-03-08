@@ -41,49 +41,39 @@
             padding: 40px;
         }
         
-        .github-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: transparent;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .github-link:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: white;
-            transform: translateY(-2px);
-        }
-        
-        .github-icon {
-            font-size: 20px;
-        }
-        
+        .github-link,
         .star-count {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            background: transparent;
-            color: white;
-            padding: 10px 16px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 8px;
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: all 0.25s ease;
+            white-space: nowrap;
         }
 
+        .github-link {
+            padding: 0 16px;
+            gap: 7px;
+        }
+
+        .star-count {
+            padding: 0 14px;
+            gap: 6px;
+        }
+
+        .github-link:hover,
         .star-count:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: white;
-            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.16);
+            color: rgba(255, 255, 255, 0.95);
+            border-color: rgba(255, 255, 255, 0.55);
+            transform: translateY(-1px);
         }
         
         h1 {
@@ -284,10 +274,7 @@
 </head>
 <body>
     <header class="page-header">
-        <a href="https://github.com/General-Business-Tools/hol-to-ics-converter" target="_blank" class="github-link" id="githubLink">
-            <span class="github-icon">🐙</span>
-            <span>View on GitHub</span>
-        </a>
+        <a href="https://github.com/General-Business-Tools/hol-to-ics-converter" target="_blank" class="github-link" id="githubLink">View on GitHub</a>
         <a href="https://github.com/General-Business-Tools/hol-to-ics-converter/stargazers" target="_blank" class="star-count" id="starCount">•••</a>
     </header>
     <div class="container">
