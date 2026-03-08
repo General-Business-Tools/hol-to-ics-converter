@@ -26,6 +26,8 @@
             max-width: 600px;
             display: flex;
             justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
             padding: 10px 0;
             margin-bottom: 15px;
         }
@@ -43,21 +45,21 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #24292e;
+            background: transparent;
             color: white;
             padding: 10px 20px;
             border-radius: 8px;
+            border: 2px solid rgba(255, 255, 255, 0.8);
             text-decoration: none;
             font-size: 14px;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
         
         .github-link:hover {
-            background: #2f363d;
+            background: rgba(255, 255, 255, 0.15);
+            border-color: white;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         
         .github-icon {
@@ -65,13 +67,23 @@
         }
         
         .star-count {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 12px;
             display: inline-flex;
             align-items: center;
-            gap: 4px;
+            gap: 6px;
+            background: transparent;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .star-count:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: white;
+            transform: translateY(-2px);
         }
         
         h1 {
@@ -273,10 +285,10 @@
 <body>
     <header class="page-header">
         <a href="https://github.com/General-Business-Tools/hol-to-ics-converter" target="_blank" class="github-link" id="githubLink">
-            <span class="github-icon">⭐</span>
+            <span class="github-icon">🐙</span>
             <span>View on GitHub</span>
-            <span class="star-count" id="starCount">•••</span>
         </a>
+        <a href="https://github.com/General-Business-Tools/hol-to-ics-converter/stargazers" target="_blank" class="star-count" id="starCount">•••</a>
     </header>
     <div class="container">
         <h1>🗓️ HOL Converter</h1>
@@ -339,11 +351,11 @@
                     const starCount = data.stargazers_count || 0;
                     document.getElementById('starCount').textContent = `⭐ ${starCount}`;
                 } else {
-                    document.getElementById('starCount').textContent = '';
+                    document.getElementById('starCount').style.display = 'none';
                 }
             } catch (error) {
                 console.warn('Could not fetch GitHub stars:', error);
-                document.getElementById('starCount').textContent = '';
+                document.getElementById('starCount').style.display = 'none';
             }
         }
 
