@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOL Converter</title>
+    <title>HOL to ICS Converter — Convert .hol Calendar Files Online</title>
+    <meta name="description" content="Free online tool to convert .hol calendar files to ICS (iCalendar), CSV, or JSON. Client-side only — your files never leave your browser.">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HOL to ICS Converter">
+    <meta property="og:description" content="Free online tool to convert .hol calendar files to ICS (iCalendar), CSV, or JSON. Client-side only — your files never leave your browser.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="HOL to ICS Converter">
+    <meta name="twitter:description" content="Free online tool to convert .hol calendar files to ICS (iCalendar), CSV, or JSON. Client-side only — your files never leave your browser.">
     <style>
         * {
             margin: 0;
@@ -581,6 +592,23 @@
             successDiv.classList.add('show');
             setTimeout(() => successDiv.classList.remove('show'), 3000);
         });
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HOL to ICS Converter",
+      "description": "Free online tool to convert .hol calendar files to ICS (iCalendar), CSV, or JSON. Client-side only — your files never leave your browser.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://github.com/General-Business-Tools/hol-to-ics-converter",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
     </script>
 </body>
 </html>
