@@ -2,8 +2,8 @@ name: Sync index.html from hol_to_ics_web.html
 
 on:
   push:
-    paths:
-      - hol_to_ics_web.html
+    branches:
+      - main
   workflow_dispatch: {}
 
 permissions:
