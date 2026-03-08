@@ -1,4 +1,4 @@
-name: Sync index.html from hol_to_ics_web.html
+name: sync index.html from hol_to_ics_web.html
 
 on:
   push:
