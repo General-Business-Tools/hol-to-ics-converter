@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://general-business-tools.github.io/hol-to-ics-converter/sitemap.xml

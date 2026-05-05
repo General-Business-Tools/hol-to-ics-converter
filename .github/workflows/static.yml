@@ -34,7 +34,11 @@ jobs:
       - name: Generate index.html
         run: cp hol_to_ics_web.html index.html
       - name: Stage files
-        run: mkdir _site && cp index.html _site/
+        run: |
+          mkdir _site
+          cp index.html _site/
+          if [ -f robots.txt ]; then cp robots.txt _site/; fi
+          if [ -f sitemap.xml ]; then cp sitemap.xml _site/; fi
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
